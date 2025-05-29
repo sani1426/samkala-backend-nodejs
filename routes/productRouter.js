@@ -6,6 +6,7 @@ import EditProductController from '../controllers/products/editProduct.js'
 import getProductByCategoryController from '../controllers/products/getProductByCategory.js'
 import getAllCategoriesController from '../controllers/products/getAllCategory.js'
 import getProductDetailsController from '../controllers/products/getProductDetails.js'
+import getProductByQueryFillter from '../controllers/products/getProductByQueryFillter.js'
 
 const router = express.Router()
 
@@ -15,6 +16,8 @@ router.get("/" , getAllProductController)
 router.post("/edit-product/:id" ,authToken , EditProductController)
 router.get("/all-categories"  , getAllCategoriesController)
 router.get("/get-products/:category"  , getProductByCategoryController)
+router.get("/fillter"  , getProductByQueryFillter)
+
 router.get("/:id"  , getProductDetailsController)
 
 
